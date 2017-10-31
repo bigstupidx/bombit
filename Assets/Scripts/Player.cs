@@ -17,7 +17,8 @@ public class Player : MonoBehaviour {
       //  PlayerPrefs.DeleteKey("Coins");
         lose = false;
         _score = 0;
-        
+        if (PlayerPrefs.GetString("Volume") == "off")
+            AudioListener.volume = 0f; 
     }
 
     void Start()
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour {
     {
         if (other.gameObject.tag == "Bomb")
         { 
+
             transform.position = new Vector3(gameObject.transform.position.x, -4.4f,0);
             transform.Rotate(Vector3.forward * 90); 
             lose = true;
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour {
 
         if (other.gameObject.tag == "Coin") { 
             _score++;
+            GetComponent<AudioSource>().Play();
             coins_txt.text = "" + _score;
             PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + 1);
         }

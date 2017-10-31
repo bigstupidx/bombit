@@ -20,6 +20,7 @@ public class FallDown : MonoBehaviour {
     {
         if (trig.gameObject.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             trig.GetComponent<Collider2D>().enabled = false;
             transform.position = new Vector3(gameObject.transform.position.x, -1.5f, 0);
             Destroy(bomb);

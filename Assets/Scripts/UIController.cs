@@ -9,14 +9,19 @@ public class UIController : MonoBehaviour {
     public GameObject[] checkers;
     public Image[] blogers;
     public Button[] buttons;
-   
+    public Sprite volume_on, volume_off;
 
     int Hovan, Vdud, Dzharahov, BigBoss, Lizzka, Druzhko, coins;
+
+
     
 
     private void Awake()
     {
-        
+
+       
+
+        PlayerPrefs.GetString("Volume");
         PlayerPrefs.GetInt("с", 0);
         Hovan = PlayerPrefs.GetInt("Hovan");
         Vdud = PlayerPrefs.GetInt("Vdud");
@@ -27,8 +32,13 @@ public class UIController : MonoBehaviour {
 
         PlayerPrefs.GetInt("b");
         coins = PlayerPrefs.GetInt("Coins");
+        if (PlayerPrefs.GetString("Volume") == "off") {
+            AudioListener.volume = 0f;
+            //  Camera.main.GetComponent<AudioListener>().enabled = false;
+        }
     }
-   
+
+  
 
     void Update()
     {
@@ -100,27 +110,27 @@ public class UIController : MonoBehaviour {
 
     public void PlayGame()
     {
+        
         SceneManager.LoadScene("Play");
     }
     public void ExitToMainMenu()
     {
-
+        
         SceneManager.LoadScene("Main");
     }
     public void Shop() {
         panel_shop.SetActive(true);
-
+        
     }
     public void Close() {
+        
         PlayerPrefs.SetInt("Coins", coins);
         panel_shop.SetActive(false);
     } 
 
     public void blogerChanger(int bloger) {
-
-        PlayerPrefs.SetInt("b",bloger);
         
-
+        PlayerPrefs.SetInt("b",bloger);
         PlayerPrefs.Save();
         switch (bloger) {
             case 0 :

@@ -19,9 +19,11 @@ public class FallDownCoins : MonoBehaviour
     {
         if (trig.gameObject.tag == "Player")
         {
+            
             if (Player.lose) {
                 trig.GetComponent<Collider2D>().enabled = false;
             }
+            
             Destroy(gameObject);
         }
     }
