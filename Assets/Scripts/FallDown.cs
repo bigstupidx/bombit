@@ -47,7 +47,7 @@ public class FallDown : MonoBehaviour {
             spawnBombs = Camera.main.GetComponent("SpawnBombs") as SpawnBombs;
             spawnBombs.spawnspeed = 0.8f;
             _score3 = HSController.hs_score += 1;
-
+            
         }
 
         if (_score2 > 10 && _score2 <= 18)
@@ -56,6 +56,7 @@ public class FallDown : MonoBehaviour {
             spawnBombs = Camera.main.GetComponent("SpawnBombs") as SpawnBombs;
             spawnBombs.spawnspeed = 0.7f;
             _score3 = HSController.hs_score += 2;
+
         }
 
         if (_score2 > 18 && _score2 <= 30)
@@ -65,6 +66,7 @@ public class FallDown : MonoBehaviour {
             spawnBombs = Camera.main.GetComponent("SpawnBombs") as SpawnBombs;
             spawnBombs.spawnspeed = 0.6f;
             _score3 = HSController.hs_score += 3;
+            SpawnBombs.spawnCoinspeed = 3f;
         }
 
         if (_score2 > 30 && _score2 <= 50)
@@ -73,6 +75,7 @@ public class FallDown : MonoBehaviour {
             spawnBombs = Camera.main.GetComponent("SpawnBombs") as SpawnBombs;
             spawnBombs.spawnspeed = 0.4f;
             _score3 = HSController.hs_score += 4;
+            SpawnBombs.spawnCoinspeed = 2.5f;
         }
         if (_score2 > 50)
         {
@@ -80,6 +83,7 @@ public class FallDown : MonoBehaviour {
             spawnBombs = Camera.main.GetComponent("SpawnBombs") as SpawnBombs;
             spawnBombs.spawnspeed = 0.3f;
             _score3 = HSController.hs_score += 5;
+            SpawnBombs.spawnCoinspeed = 2f;
         }
         //   transform.position -= new Vector3(0, fallSpeed * Time.deltaTime, 0);
     }

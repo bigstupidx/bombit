@@ -44,7 +44,7 @@ public class UIController : MonoBehaviour {
 
         blogers[PlayerPrefs.GetInt("b")].color = Color.white;
         
-        if (coins >= 350)
+        if (coins >= 500)
         {
             
             buttons[1].interactable = true;
@@ -136,7 +136,7 @@ public class UIController : MonoBehaviour {
                 break;
             case 1 :
                if (Hovan == 0) {
-                coins -= 350;
+                coins -= 500;
                 PlayerPrefs.SetInt("Coins", coins);
                 PlayerPrefs.SetInt("Hovan", 1);
                 PlayerPrefs.Save();
@@ -162,7 +162,7 @@ public class UIController : MonoBehaviour {
             case 2:
                 if (Vdud == 0)
                 {
-                    coins -= 350;
+                    coins -= 500;
                     PlayerPrefs.SetInt("Coins", coins);
                     PlayerPrefs.SetInt("Vdud", 1);
                     PlayerPrefs.Save();
@@ -189,7 +189,7 @@ public class UIController : MonoBehaviour {
             case 3:
                 if (Dzharahov == 0)
                 {
-                    coins -= 350;
+                    coins -= 500;
                     PlayerPrefs.SetInt("Coins", coins);
                     PlayerPrefs.SetInt("Dzharahov", 1);
                     PlayerPrefs.Save();
@@ -218,7 +218,7 @@ public class UIController : MonoBehaviour {
                 if (BigBoss == 0)
                 {
 
-                    coins -= 350;
+                    coins -= 500;
                     PlayerPrefs.SetInt("Coins", coins);
                     PlayerPrefs.SetInt("BigBoss", 1);
                     PlayerPrefs.Save();
@@ -247,7 +247,7 @@ public class UIController : MonoBehaviour {
             case 5:
                 if (Lizzka == 0)
                 {
-                    coins -= 350;
+                    coins -= 500;
                     PlayerPrefs.SetInt("Coins", coins);
                     PlayerPrefs.SetInt("Lizzka", 1);
                     PlayerPrefs.Save();
@@ -276,7 +276,7 @@ public class UIController : MonoBehaviour {
             case 6:
                 if (Druzhko == 0)
                 {
-                    coins -= 350;
+                    coins -= 500;
                     PlayerPrefs.SetInt("Coins", coins);
                     PlayerPrefs.SetInt("Druzhko", 1);
                     PlayerPrefs.Save();

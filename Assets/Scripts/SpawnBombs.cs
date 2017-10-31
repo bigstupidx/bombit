@@ -5,6 +5,7 @@ public class SpawnBombs : MonoBehaviour {
 
     public GameObject bomb,coins;
     public float spawnspeed = 1f;
+    public static float spawnCoinspeed = 5f;
 
     void Start() {
         StartCoroutine(SpawnBomb ());
@@ -23,7 +24,7 @@ public class SpawnBombs : MonoBehaviour {
         while (!Player.lose)
         {    
             Instantiate(coins, new Vector2(Random.Range(-2f, 2f), 13.6f), Quaternion.identity);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(spawnCoinspeed);
         }
     }
 }

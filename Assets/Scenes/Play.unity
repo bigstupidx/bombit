@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1914817609}
-  speed: 30
+  speed: 100
   players: {fileID: 1914817606}
 --- !u!65 &961715652
 BoxCollider:
