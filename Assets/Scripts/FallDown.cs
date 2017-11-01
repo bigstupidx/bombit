@@ -6,7 +6,7 @@ public class FallDown : MonoBehaviour {
 
     [SerializeField] private float fallSpeed = 3f;
     public GameObject bomb, boom;
-    private int _score2, _score3;
+    public static int _score2, _score3;
     SpawnBombs spawnBombs;
     Rigidbody2D rigidbody2D;
     

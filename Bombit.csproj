@@ -223,6 +223,9 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>Assets\UnityAds\UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Audio.cs" />
@@ -234,6 +237,7 @@
     <Compile Include="Assets\Scripts\HScore.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\RewardAds.cs" />
     <Compile Include="Assets\Scripts\SpawnBombs.cs" />
     <Compile Include="Assets\Scripts\UIController.cs" />
   </ItemGroup>
