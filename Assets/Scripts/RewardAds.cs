@@ -32,7 +32,7 @@ public class RewardAds : MonoBehaviour {
 	
 	
 	void Update () {
-        if (m_Button) m_Button.interactable = Advertisement.IsReady(placementId);
+      //  if (m_Button) m_Button.interactable = Advertisement.IsReady(placementId);
         if (FallDown._score2 >= 50)
         {
             cost_text.text = "+50";
