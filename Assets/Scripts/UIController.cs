@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
-    public GameObject panel_shop;
+    public GameObject panel_shop, panel_more;
     public GameObject[] checkers;
     public Image[] blogers;
     public Button[] buttons;
@@ -18,9 +18,6 @@ public class UIController : MonoBehaviour {
 
     private void Awake()
     {
-
-       
-
         PlayerPrefs.GetString("Volume");
         PlayerPrefs.GetInt("с", 0);
         Hovan = PlayerPrefs.GetInt("Hovan");
@@ -106,6 +103,7 @@ public class UIController : MonoBehaviour {
             PlayerPrefs.SetInt("Coins", coins);
             panel_shop.SetActive(false);
         }
+        
     }
 
     public void PlayGame()
@@ -122,12 +120,39 @@ public class UIController : MonoBehaviour {
         panel_shop.SetActive(true);
         
     }
+
+    public void Info()
+    {
+        SceneManager.LoadScene("Info");
+    }
+    public void CloseApp()
+    {
+        Application.Quit();
+    }
+
+    public void LoadInstaYarik()
+    {
+        Application.OpenURL("https://www.instagram.com/yarikzhuravlev/");
+    }
+    public void LoadFaceYarik()
+    {
+        Application.OpenURL("https://www.facebook.com/yarik.zhuravlov");
+    }
+    public void LoadInstaNik()
+    {
+        Application.OpenURL("https://www.instagram.com/vonemip/");
+    }
+    public void LoadPlayMarket()
+    {
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.yza.bombit");
+    }
+
     public void Close() {
         
         PlayerPrefs.SetInt("Coins", coins);
         panel_shop.SetActive(false);
-    } 
-
+    }
+    
     public void blogerChanger(int bloger) {
         
         PlayerPrefs.SetInt("b",bloger);
