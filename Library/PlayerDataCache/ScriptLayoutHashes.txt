@@ -118,6 +118,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 f99afcd233c094967dd5fcc795d18028 Assembly-CSharp.dll:.Move
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CloseInfoScene
 8486442d0780eafa544690e735096fe9 Assembly-CSharp.dll:.HScore
+05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
+05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 e666dd7a280e56c24cc5097104f72c86 Assembly-CSharp.dll:.RewardAds
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour

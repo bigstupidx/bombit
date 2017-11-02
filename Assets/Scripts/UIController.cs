@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour {
     private void Awake()
     {
         pause = false;
+        
         PlayerPrefs.GetString("Volume");
         PlayerPrefs.GetInt("с", 0);
         Hovan = PlayerPrefs.GetInt("Hovan");

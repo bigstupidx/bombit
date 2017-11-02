@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
     void Start()
     {
         if (Advertisement.isSupported)
-            Advertisement.Initialize(gameId, true); // ПРОВЕРЬ НА FALSE ИЛИ TRUE
+            Advertisement.Initialize(gameId, false); // ПРОВЕРЬ НА FALSE ИЛИ TRUE
         blogers[PlayerPrefs.GetInt("b")].SetActive(true);
         player = blogers[PlayerPrefs.GetInt("b")];
     }

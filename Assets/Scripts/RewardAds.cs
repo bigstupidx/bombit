@@ -25,7 +25,7 @@ public class RewardAds : MonoBehaviour {
 
         if (Advertisement.isSupported)
         {
-            Advertisement.Initialize(gameId, true); /// Проверяй!
+            Advertisement.Initialize(gameId, false); /// Проверяй!
         }
         
     }
