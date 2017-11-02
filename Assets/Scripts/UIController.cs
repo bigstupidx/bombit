@@ -9,15 +9,14 @@ public class UIController : MonoBehaviour {
     public GameObject[] checkers;
     public Image[] blogers;
     public Button[] buttons;
-    public Sprite volume_on, volume_off;
-
+    public Sprite pause_btn, unpause_btn;
     int Hovan, Vdud, Dzharahov, BigBoss, Lizzka, Druzhko, coins;
-
-
+    private bool pause = false;
     
 
     private void Awake()
     {
+        pause = false;
         PlayerPrefs.GetString("Volume");
         PlayerPrefs.GetInt("с", 0);
         Hovan = PlayerPrefs.GetInt("Hovan");
@@ -129,6 +128,23 @@ public class UIController : MonoBehaviour {
     {
         Application.Quit();
     }
+    public void Pause()
+    {
+        if (pause == false)
+        {
+            pause = true;
+            Time.timeScale = 0;
+            GetComponent<Image>().sprite = unpause_btn;
+        }
+        else if (pause == true) {
+            pause = false;
+            Time.timeScale = 1;
+            GetComponent<Image>().sprite = pause_btn;
+        }
+               
+    }
+        
+    
 
     public void LoadInstaYarik()
     {

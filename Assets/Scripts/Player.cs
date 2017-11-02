@@ -11,6 +11,7 @@ public class Player : MonoBehaviour {
     public GameObject[] blogers;
     public string placementId = "rewardedVideo";
     private string gameId = "1594141";
+    public Button Button_pause;
 
     void Awake()
     {
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour {
         ads++;
         lose = true;
         panel_lose.SetActive(true);
+        Button_pause.interactable = false;
         if (Advertisement.IsReady() && ads %2 ==0 ) {
             Advertisement.Show();
         }
